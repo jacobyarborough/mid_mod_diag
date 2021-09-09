@@ -8,4 +8,8 @@ class Department
     @employees = []
   end
 
+  def hire(employee)
+    @employees.push(employee)
+  end
+
 end

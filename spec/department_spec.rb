@@ -19,4 +19,16 @@ describe Department do
     end
   end
 
+  describe '#hire' do
+    it 'adds an employee to the employees array' do
+      customer_service = Department.new("Customer Service")
+      bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+      aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
+      customer_service.hire(bobbi)
+      customer_service.hire(aaron)
+
+      expect(customer_service.employees).to eq([bobbi, aaron])
+    end
+  end
+
 end

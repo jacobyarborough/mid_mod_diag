@@ -1,7 +1,11 @@
 class Department
 
+  attr_reader :name,
+              :employees
+
   def initialize(department)
-    @department = department
-  end 
+    @name = department
+    @employees = []
+  end
 
 end
